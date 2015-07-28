@@ -1,11 +1,5 @@
 import sys
 
-def is_multiple(to_be_tested, prime):
-    "test whether a number is the multiple of a prime number"
-    if ((to_be_tested / prime) * prime == to_be_tested):
-        return True
-    else:
-        return False
 
 def sum_of_multiples(upper_bound, prime1, prime2):
     """
@@ -19,9 +13,16 @@ def sum_of_multiples(upper_bound, prime1, prime2):
     return sum
 
 
+def is_multiple(to_be_tested, prime):
+    "test whether a number is the multiple of a prime number"
+    if ((to_be_tested / prime) * prime == to_be_tested):
+        return True
+    else:
+        return False
 
 
 if __name__ == "__main__":
     print "arguments include: upper_bound-{0}, prime1-{1}, prime2-{2}".format(
           sys.argv[1], sys.argv[2], sys.argv[3])
-    print sum_of_multiples(int(sys.argv[1]), int(sys.argv[2]), int(sys.argv[3]))
+    print sum_of_multiples(int(sys.argv[1]),
+                           int(sys.argv[2]), int(sys.argv[3]))
