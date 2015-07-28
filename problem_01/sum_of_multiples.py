@@ -8,17 +8,9 @@ def sum_of_multiples(upper_bound, prime1, prime2):
     """
     sum = 0
     for i in range(2, upper_bound):
-        if (is_multiple(i, prime1) or is_multiple(i, prime2)):
+        if ((i % prime1 == 0) or (i % prime2 == 0)):
             sum += i
     return sum
-
-
-def is_multiple(to_be_tested, prime):
-    "test whether a number is the multiple of a prime number"
-    if ((to_be_tested / prime) * prime == to_be_tested):
-        return True
-    else:
-        return False
 
 
 if __name__ == "__main__":
