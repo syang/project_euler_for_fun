@@ -11,11 +11,12 @@ def even_fib_sum(upper_bound):
         fib_number = fib_iterable.next()
     return sum
 
+
 def fib_generator():
     fib = 1
     next_fib = 2
     while True:
-        yield fib;
+        yield fib
         temp = fib
         fib = next_fib
         next_fib = temp + fib
